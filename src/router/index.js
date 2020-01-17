@@ -9,7 +9,12 @@ Vue.use(VueRouter)
 const routes = [
   movieRouter,
   mineRouter,
-  cinemaRouter
+  cinemaRouter,
+  // 默认一级路由重定向到movie中
+  {
+    path:'/*',
+    redirect:'/movie'
+  }
 ]
 
 const router = new VueRouter({
